@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'contacts',
+    'emails',
 ]
 
 MIDDLEWARE = [
@@ -62,12 +63,8 @@ WSGI_APPLICATION = 'contact.wsgi.application'
 
 DATABASES = {
     'default': {
-       'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'ecash',
-       'USER': 'postgres',
-       'PASSWORD': 'postgres',
-       'HOST': '127.0.0.1',
-       'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -107,6 +104,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+#Email setting
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'team.techelementbd@gmail.com'
+EMAIL_HOST_PASSWORD = 'cilishwhahwubtvt'
+EMAIL_PORT = 587
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
