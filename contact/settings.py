@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-qj%(^p%%2+!+)4uze#ew$p!8&em2-xgte8_!s_!7_vey32k4rj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -55,7 +55,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'contact.wsgi.application'
+WSGI_APPLICATION = 'contact.wsgi.application.app'
 
 
 # Database
@@ -104,6 +104,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
 
 #Email setting
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
