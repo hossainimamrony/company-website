@@ -1,3 +1,2 @@
 django==3.2.21
 djangorestframework==3.14.0
-sqlite3==3.43.1
