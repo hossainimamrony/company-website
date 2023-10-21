@@ -1,3 +1,3 @@
 pip install -r requirements.txt
-python3 manage.py collectstatic
 pip install --upgrade pip
+python3 manage.py runserver
