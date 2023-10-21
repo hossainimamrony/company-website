@@ -1,14 +1,14 @@
 {
-    "builds":[
-        {
-            "source": "/contact/wsgi.py",
-            "use": "@vercel/python"
-        }
+    "builds": [
+      {
+        "src": "contact/wsgi.py",
+        "use": "@vercel/python"
+      }
     ],
-    "routes":[
-        {
-            "source": "/(.*)",
-            "destination": "/contact/wsgi.py"
-        }
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "contact/wsgi.py"
+      }
     ]
 }
