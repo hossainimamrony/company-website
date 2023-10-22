@@ -1,4 +1,4 @@
 from django.contrib import admin
-from emails.models import EmailModel
+from emails.models import Email
 
-admin.site.register(EmailModel)
+admin.site.register(Email)

@@ -8,7 +8,7 @@ class Contact(models.Model):
     Email=models.EmailField(max_length=100)
     Purpose=models.CharField(max_length=50)
     Message=models.TextField()
-    time=models.DateTimeField(auto_now_add=True)
+    #time=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.Full_Name

@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import EmailModel
+from .models import Email
 
 class EmailModelSerializer(serializers.ModelSerializer):
     class Meta:
-        model=EmailModel
+        model=Email
         fields=('__all__')

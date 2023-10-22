@@ -9,7 +9,7 @@ from rest_framework import generics,mixins
 from emails import email_send
 from emails.serializers import EmailModelSerializer
 import json
-from emails.models import EmailModel
+from emails.models import Email
 
 
 class ConactUs(APIView):
@@ -31,7 +31,7 @@ class ConactUs(APIView):
             x=serializer.data['Email']
             to=[x,'team.techelementbd@gmail.com']
             email_send.send(sub,b,to)
-            s=EmailModel()
+            s=Email()
             s.email=x
             s.save()
             

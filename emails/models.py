@@ -1,6 +1,6 @@
 from django.db import models
 
-class EmailModel(models.Model):
+class Email(models.Model):
     email=models.TextField()
 
     def __str__(self):
