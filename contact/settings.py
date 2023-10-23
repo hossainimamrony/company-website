@@ -2,9 +2,11 @@
 
 from pathlib import Path
 import os
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+DATABASES_URL='mysql://root:tRUOsbYLy3Khe3WDpQIG@containers-us-west-166.railway.app:6050/railway'
 
 SECRET_KEY = 'django-insecure-qj%(^p%%2+!+)4uze#ew$p!8&em2-xgte8_!s_!7_vey32k4rj'
 
@@ -65,11 +67,11 @@ WSGI_APPLICATION = 'contact.wsgi.application'
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'test',
-        'USER': 'team',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'tRUOsbYLy3Khe3WDpQIG',
+        'HOST': 'containers-us-west-166.railway.app',   # Or an IP Address that your DB is hosted on
+        'PORT': '6050',
    }
 }
 
